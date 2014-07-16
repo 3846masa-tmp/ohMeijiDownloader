@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Oh-Meiji Downloader",
+  "version": "0.0.1",
+
+  "icons": { "48": "icon48.png",
+             "128": "icon128.png" },
+
+  "description": "※明治大学非公式 Oh-MeijiのファイルをZIPで一括ダウンロードできます。",
+  
+  "content_scripts": [
+    {
+      "matches": ["https://oh-o2.meiji.ac.jp/classweb/course/view.php?*"],
+      "js": ["FileSaver.js","jquery-2.1.0.min.js","jszip.min.js","OhMeijiDLer.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
